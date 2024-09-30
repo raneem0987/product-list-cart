@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const productImage = card.querySelector('.image-product');
 
       addCartButton.addEventListener('click', () => {
-        addCartButton.classList.add('hidden');
-        counterElement.classList.remove('hidden');
+        addCartButton.classList.add('.hidden');
+        counterElement.classList.remove('.hidden');
         productImage.classList.add('active');
         if (!cart[productName]) {
           cart[productName] = { price: productPrice, quantity: 1 };
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
           cart[productName].quantity -= 1;
           if (cart[productName].quantity === 0) {
             delete cart[productName];
-            addCartButton.classList.remove('hidden');
-            counterElement.classList.add('hidden');
+            addCartButton.classList.remove('.hidden');
+            counterElement.classList.add('.hidden');
             productImage.classList.remove('active');
           }
           counterElement.querySelector('span').textContent = cart[productName] ? cart[productName].quantity : 0;
