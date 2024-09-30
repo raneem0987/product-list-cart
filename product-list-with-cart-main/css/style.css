@@ -31,16 +31,17 @@ body {
     font-size: var(--font-size-body);
     background-color: var(--primary-light-color);
 }
-h2{
+.products-card h2{
     margin: 0;
     font-size: 1em;
 }
-h3{
+.products-card h3{
     margin: 5px 0;
     font-size: 0.8em;
     color: var(--primary-color);
+    margin-left: -7rem;
 }
-h4{
+.products-card h4{
     font-size: 1.2em;
     color: var(--primary-color);
 }
@@ -48,7 +49,7 @@ h4{
     padding: 3rem 2rem 2rem 5rem;
     display: flex;
 }
-main{
+.products{
     gap: 10px;
     display: grid;
     margin-right: 1rem;
@@ -85,6 +86,7 @@ main{
     font-size: 0.9em;
     color: var(----secondary-dark-color);
     font-weight: var(--font-weight-medium);
+    margin-left: -6rem;
 }
 .image-product{
     width: 100%;
@@ -153,7 +155,7 @@ main{
 .counter span{
     color: hsl(0, 0%, 100%);
 }
-.hidden {
+.counter.hidden {
     display: none;
 }
 .cart-item,.summary-item{
@@ -291,20 +293,36 @@ main{
     h1{
         font-size: 2em;
     }
+    
     .container {
         padding: 1rem 1.5rem;
         flex-direction: column;
     }
-    main{
+
+    .products{
         display: flex;
         align-items: center;
         flex-direction: column;
     }
+
+    .products p{
+        margin-left: -13rem;
+    }
+
+    .products h2{
+        margin-left: -7rem;
+    }
+
+    .products h3{
+        margin-left: -14rem;
+    }
+
     .image-product{
         width: 100%;
         height: 100%;
     }
-    .final-summary{
+
+    .final{
         width: 90%;
         height: 100%;
         margin-top: 8rem;
@@ -316,7 +334,7 @@ main{
         padding-left: 0;
         padding: 1rem 1.5rem;
     }
-    main{
+    .products{
         height: 100vh;
         overflow-y: scroll;
         width: 95%;
@@ -334,7 +352,7 @@ main{
     .cart{
         width: 300px;
     }
-    .final-summary{
+    .final{
         width: 50%;
     }
 }
