@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Product list with cart</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 <body>
   <div class="container">
@@ -20,9 +21,9 @@
           </div>        
           <button class="addCart"><img src="assets/images/icon-add-to-cart.svg" alt="add-to-cart">Add to Cart</button>
           <div class="counter hidden">
-            <img class="decrement" src="assets/images/icon-decrement-quantity.svg" alt="decrement-quantity">
+            <img class="decrement" src="assets/images/icon-decrement-quantity.svg" alt="">
             <span>0</span>
-            <img class="increment" src="assets/images/icon-increment-quantity.svg" alt="increment-quantity">
+            <img class="increment" src="assets/images/icon-increment-quantity.svg" alt="">
           </div>
           <p>Waffle</p>
           <h2 class="product-name">Waffle with Berries</h2>
@@ -168,17 +169,17 @@
     </section>
   
     <div class="sidebar">
-      <div class="cart">
+      <div class="mycart">
         <h4>Your Cart (<span class="quantity">0</span>)</h4>
         <div class="empty-content">
           <img src="assets/images/illustration-empty-cart.svg" alt="illustration-empty-cart">
           <p class="empty-message">Your added items will appear here</p>
         </div>
-        <div class="cart-items"></div>
+        <div class="cart-items" id="orderDetails"></div>
 
         <div class="cart-summary" style="display: none;">
           <div class="total">
-              <p>Order Total</p>
+              <p><small>Order Total</small></p>
               <p class="cart-total">$0.00</p>
           </div>
           <p class="carbo"><img src="assets/images/icon-carbon-neutral.svg" alt="carbon-neutral">This is a carbo-neutral delivery</p>
@@ -198,6 +199,6 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
