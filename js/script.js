@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       cartItem.querySelector('.remove-item').addEventListener('click', () => {
         delete cart[productName];
+        location.reload();
         updateCartSidebar();
       });
 
@@ -50,9 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (quantity > 0) {
       emptyContent.style.display = 'none';
       cartSummary.style.display = 'block';
+      // counterElement.style.display = 'block';
     } else {
       emptyContent.style.display = 'block';
       cartSummary.style.display = 'none';
+      // counterElement.style.display = 'none';
     }
   }
 
@@ -100,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   confirmOrderButton.addEventListener('click', () => {
     overlay.style.display = 'block';
     final.style.display = 'block';
-    order.innerHTML = ''; 
+    order.innerHTML = '';
 
     let totalOrderPrice = 0;
 
@@ -111,14 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
         orderItem.classList.add('order-item');
         orderItem.innerHTML = `
         <div class="order-item-details">
-          <div class="first-details">
-            <img src="${item.image}" alt="${productName}" style="width: 60px; height: 60px; object-fit: cover;" />
-            <p class="name"><strong>${productName}</strong></p>
-            <p class="total"><strong> $${(item.quantity * item.price).toFixed(2)}</strong></p>
-          <div/>
-          <div class="details">
-            <p class="quantity"><strong>${item.quantity}x</strong></p>
-            <p class="price"><strong>@ $${item.price.toFixed(2)}</strong></p>
+        <img class="image" src="${item.image}" alt="${productName}" style="width: 60px; height: 60px; object-fit: cover;" />
+          <div class="order-details">
+             <p><strong>${productName}</strong></p>
+             <p class="small-total"><strong> $${(item.quantity * item.price).toFixed(2)}</strong>
+             <div/>
+             <div class="number">
+             <p class="quantity"><strong>${item.quantity}x</strong></p>
+             <p class="price"><strong>@ $${item.price.toFixed(2)}</strong></p>
           <div/>
         </div>
         `;
@@ -133,14 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
     totalElement.innerHTML = `Order Total <strong>$${totalOrderPrice.toFixed(2)}</strong>`;
     order.appendChild(totalElement);
 
-    cart = {}; 
-    updateCartSidebar(); 
+    cart = {};
+    updateCartSidebar();
   });
 
   startButton.addEventListener('click', () => {
     overlay.style.display = 'none';
     final.style.display = 'none';
-    location.reload(); 
+    location.reload();
     updateCartSidebar();
   });
 });
