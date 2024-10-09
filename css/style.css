@@ -31,21 +31,41 @@ body {
     background-color: var(--primary-light-color);
 }
 
+
+.products-card {
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products .products-card .details{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    line-height: 0;
+}
+
+.products-card p {
+    /* margin-top: 1.5rem; */
+    font-size: 0.9em;
+    color: var(----secondary-dark-color);
+    font-weight: var(--font-weight-medium);
+    /* margin-left: -6rem; */
+}
+
 .products-card h2 {
-    margin: 0;
+    /* margin: 0; */
     font-size: 1em;
 }
 
 .products-card h3 {
-    margin: 5px 0;
+    /* margin: 5px 0; */
     font-size: 0.8em;
     color: var(--primary-color);
-    margin-left: -7rem;
-}
-
-.products-card h4 {
-    font-size: 1.2em;
-    color: var(--primary-color);
+    /* margin-left: -7rem; */
 }
 
 .container {
@@ -56,12 +76,17 @@ body {
 .products {
     gap: 10px;
     display: grid;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     grid-template-columns: 1fr 1fr 1fr;
+    margin: -2rem 9rem;
 }
 
 .main-menu {
     flex: 2;
+}
+
+.main-menu h1{
+    margin: 1rem 9rem;
 }
 
 .sidebar {
@@ -72,6 +97,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
+    width: 60%;
+    margin-left: -7rem;
 }
 
 .mycart h4 {
@@ -87,26 +114,9 @@ body {
     text-align: center;
 }
 
-.products-card {
-    margin-top: 2rem;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.products-card p {
-    margin-top: 1.5rem;
-    font-size: 0.9em;
-    color: var(----secondary-dark-color);
-    font-weight: var(--font-weight-medium);
-    margin-left: -6rem;
-}
-
 .image-product {
     width: 100%;
-    height: 35vh;
+    height: 26vh;
     object-fit: cover;
     border-radius: 10px;
     position: relative;
@@ -296,7 +306,7 @@ body {
 }
 
 .final {
-    width: 30%;
+    width: 23%;
     position: absolute;
     background: white;
     padding: 30px;
@@ -373,7 +383,7 @@ body {
     font-size: x-small;
     width: 11px;
     text-align: center;
-    margin-left: 18rem;
+    margin-left: 8rem;
 }
 
 .remove-item:hover {
@@ -398,47 +408,63 @@ body {
   
   .order-item-details {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-rose-100);
   }
   
- .order-item-details .first-details{
-display: flex;
-flex-direction: row;
+ .order-item-details .order-details{
+    gap: 20px;
+    display: flex;
+    align-items: flex-start;
+    font-size: x-small;
+    margin-left: 10px;
  }
 
-  .order-item-details .first-details .name{
-    font-size: x-small;
-    margin-left: 17px;
-    margin-right: 160px;
-  }
-
-  .order-item-details .first-details .total{
-    font-size: x-small;
-    align-items: baseline;
-  }
-
-  .order-item-details .details{
+ .order-item-details .number{
+    justify-items: left;
     display: flex;
-    flex-direction: row;
-    margin-left: -280px;
-    font-size: small;
-    margin-top: 26px;
-  }
+    margin-left: -10rem;
+    margin-top: 31px;
+ }
+
+ /* .order-item-details .small-total{
+    display: flex;
+    justify-items: left;
+    margin-left: 8rem;
+    align-items: flex-end;
+ } */
+
+ .order-item-details .image{
+    height: 8vh;
+    border-radius: 10px;
+ }
 
   .order-item-details .quantity{
-    color: red;
-    /* margin: 73px 71px; */
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .order-item-details .price{
+    margin-right: 10px;
+    /* color: var(--color-rose-300); */
+    font-weight: var(--font-weight-medium);
   }
   
   .total-price-end {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: var(----secondary-dark-color);
     margin-top: 20px;
     text-align: right;
     display: flex;
     justify-content: space-between;
+  }
+
+  .total-price-end strong{
+    color: var(----third-dark-color);
   }
 
   .start {
